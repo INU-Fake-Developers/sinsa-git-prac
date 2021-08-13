@@ -2,44 +2,44 @@
  * 声明，本项目仅帮助大家学习技术及娱乐，切勿将修改后的网站大规模传播及商用，以避免侵权！
  */
 
-// 额外分数：修改数字
+// 추가 점수
 let extraScore = 1;
 
-// 无敌模式：true 改为 false
+// 무적 모드
 let wuDi = true;
 
-// 第一个水果：修改数字为 0-10, 0 为葡萄，9 为半个西瓜
-let firstFruit = 0;
-
-// 水果合成反转：false 改为 true
+// 첫 과일 수정
+let firstFruit = 0
+;
+// 과일 순서 반전
 let reverseLevelUp = false;
 
-// 指定生成的水果：默认值: 不开启反转 0-5 开启反转 6-11，修改对应数字即可控制随机生成的水果范围
-const minRandomFruitNum = reverseLevelUp ? 6 : 0; // 生成随机水果最小值（0-10）0 为葡萄，9 为半个西瓜
-const maxRandomFruitNum = reverseLevelUp ? 11 : 5; // 生成随机水果最大值（1-11）0 为葡萄，9 为半个西瓜
+// 무작위로 생성되는 과일 범위 지정
+const minRandomFruitNum = reverseLevelUp ? 6 : 0; // 기본 모드 0부터 , 반전 모드 6부터
+const maxRandomFruitNum = reverseLevelUp ? 11 : 5; // 기본 모드 5까지 , 반전 모드 11까지
 let setFruits = {
-  // 指定前几次生成的水果，可填入任意数量的数字，0 为葡萄，9 为半个西瓜
+  // 처음 시작 할때 과일 지정
   startFruits: reverseLevelUp ? [10, 10, 9, 8, 8, 7] : [0, 0, 1, 2, 2, 3],
   randomFunction: () => {
     return minRandomFruitNum + Math.floor(Math.random() * (maxRandomFruitNum - minRandomFruitNum));
   }
 }
 
-// 让水果更 Q 弹：false 改为大于 0 小于 1 的任意小数（推荐 0.9）
-let fruitQTan = false;
+// 과일 Q Tan(?) 설정 , 1 이하의 소수 (0.9 추천)
+let fruitQTan = 0.5;
 
-// 让水果下落缓慢：false 改为大于 0 的任意数，值越大阻力越大，下落越慢（推荐 5）
-let fruitSlowDown = false;
+// 과일 떨어지는 속도 설정. 클 수록 늦게 떨어짐.
+let fruitSlowDown = 3;
 
-// 点击右上方图标更换水果：false 改为 true 即可
+// 과일 바꾸기 가능 여부
 let clickChangeFruit = true;
 
-// 广告链接：false 或为空字符串表示不会跳转到广告
-let adLink = 'https://636f-codenav-8grj8px727565176-1256524210.tcb.qcloud.la/yupi_wechat.png';
+// 광고 링크
+let adLink = false;
 
-// 修改网页标题：将 "合成大西瓜" 进行替换
-document.getElementsByTagName("title")[0].innerText = '合成大西瓜';
+// 웹 제목 수정
+document.getElementsByTagName("title")[0].innerText = '메이플 팬게임';
 
-// 开启选分弹窗：将 false 改为 true
+// 팝업 열기 여부
 let selectModal = false;
 
