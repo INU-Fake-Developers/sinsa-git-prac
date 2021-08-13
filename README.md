@@ -7,7 +7,7 @@ git-watermelon
 
 H<sub>2</sub> O - melon?
 
-[멜론게임](https://watermelon-sinsa.netlify.app)
+[수박     게임](https://watermelon-sinsa.netlify.app)
   
 </div>
 </details>
